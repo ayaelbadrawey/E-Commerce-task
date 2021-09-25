@@ -11,10 +11,14 @@
   font-family: "Garamond";
   color: black;
 }
+.title {
+  margin-top: 5px;
+  margin-left: 7px;
+  font-weight: 550;
+}
 .filter {
   font-weight: 500;
 }
-
 .categ {
   min-width: 200px;
   min-height: 100px;
@@ -39,8 +43,34 @@
   display: inline-flex;
 }
 .filters {
-  min-width: 400px;
+  min-width: 300px;
   min-height: 500px;
   padding: 10px;
   margin: 20px;
+}
+.pricefilter {
+  min-width: 200px;
+  margin-left: 30px;
+  height: 130px;
+  width: 230px;
+  border: 6px;
+  display: inline-block;
+}
+.input {
+  margin-left: 7px;
+  margin-bottom: 7px;
+  width: 85px;
+  border: 1px solid black;
+  display: inline-flex;
+}
+.update {
+  margin-left: 138px;
+  margin-top: 10px;
+  border: 1px solid;
+  width: 58px;
+  height: 25px;
+  background-color: white;
+}
+.update:hover {
+  background-color: lightblue;
 }
