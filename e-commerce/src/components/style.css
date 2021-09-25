@@ -11,6 +11,9 @@
   font-family: "Garamond";
   color: black;
 }
+.filter {
+  font-weight: 500;
+}
 
 .categ {
   min-width: 200px;
@@ -22,10 +25,11 @@
 }
 
 .bigProd {
-  min-width: 500px;
+  min-width: 950px;
   min-height: 500px;
   padding: 10px;
-  margin-left: 450px;
+  margin: 20px;
+  margin-left: 50px;
 }
 .smallProd {
   min-width: 200px;
@@ -33,4 +37,10 @@
   padding: 10px;
   margin: 20px;
   display: inline-flex;
+}
+.filters {
+  min-width: 400px;
+  min-height: 500px;
+  padding: 10px;
+  margin: 20px;
 }
