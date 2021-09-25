@@ -8,8 +8,9 @@ function Categroies() {
         <div>
             <Paper className="categ">
                 <div>
-                    <h1>name</h1>
-                    <p>image</p>
+                <img src="" alt="img"></img>
+                    <p className="categName">Name</p>
+                    
                 </div>
 
             </Paper>

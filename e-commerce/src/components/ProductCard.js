@@ -3,6 +3,7 @@ import { Paper } from '@mui/material'
 import { FaStar } from 'react-icons/fa';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './style.css'
+import { padding } from '@mui/system';
 
 
 function ProductCard({check}) {
@@ -10,14 +11,18 @@ function ProductCard({check}) {
         <div>
             <Paper className="smallProd" elevation={1}>
                     <div>
-                    <h2>image</h2>
-                    <h3>name</h3>
+                    <img src="" alt="img"></img>
+
+                    <h3 className="proName">name</h3>
+                    <div style={{paddingLeft:"65px"}}>
                     <FaStar style={{color:"yellow"}}/>
                     {check>=2? (<FaStar style={{color:"yellow"}}/>):( <FaStar />)}
                     {check>=3? (<FaStar style={{color:"yellow"}}/>):( <FaStar />)}
                     {check>=4? (<FaStar style={{color:"yellow"}}/>):( <FaStar />)}
                     {check>=5? (<FaStar style={{color:"yellow"}}/>):( <FaStar />)}
-                    <h4>$ Price</h4>
+                    </div>
+                    <h4 className="proName">$ Price</h4>
+                    
                     </div>
                 </Paper>            
         </div>

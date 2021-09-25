@@ -6,6 +6,15 @@
   font-family: "Garamond";
   color: darkslategrey;
 }
+
+.categName {
+  padding-left: 75px;
+  padding-bottom: 0px;
+}
+.proName {
+  padding-left: 80px;
+  font-family: "Garamond";
+}
 .txt {
   text-align: center;
   font-family: "Garamond";
