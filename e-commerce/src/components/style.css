@@ -8,11 +8,18 @@
 }
 
 .categName {
-  padding-left: 75px;
-  padding-bottom: 0px;
+  text-align: center;
+  padding-top: 10%;
+  font-family: "Garmond";
 }
 .proName {
-  padding-left: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-family: "Garamond";
+}
+.proPrice {
+  padding-left: 170px;
   font-family: "Garamond";
 }
 .txt {
@@ -39,14 +46,14 @@
 
 .bigProd {
   min-width: 1050px;
-  min-height: 900px;
+  height: 100%;
   padding: 10px;
   margin: 20px;
   margin-left: 50px;
 }
 .smallProd {
-  min-width: 200px;
-  min-height: 200px;
+  width: 400px;
+  height: 405px;
   padding: 10px;
   margin: 20px;
   display: inline-flex;
@@ -67,7 +74,7 @@
 }
 .colorfilter {
   min-width: 200px;
-  min-height: 200px;
+  min-height: 500px;
   margin-left: 30px;
   margin-top: 40px;
   height: 130px;
@@ -93,11 +100,12 @@
   display: inline-flex;
 }
 .update {
-  margin-left: 138px;
+  margin-left: 113px;
   margin-top: 10px;
-  border: 1px solid;
-  width: 58px;
-  height: 25px;
+  border: 1px solid black;
+  text-align: center;
+  width: 70px;
+  height: 30px;
   background-color: white;
 }
 .update:hover {
@@ -110,4 +118,8 @@
 .search {
   margin-left: 20px;
   padding-top: 0px;
+}
+
+.img {
+  max-width: 100%;
 }

@@ -4,24 +4,25 @@ import { FaStar } from 'react-icons/fa';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './style.css'
 import { padding } from '@mui/system';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-function ProductCard({check}) {
+function ProductCard({img, name, rate, price}) {
     return (
         <div>
             <Paper className="smallProd" elevation={1}>
-                    <div>
-                    <img src="" alt="img"></img>
+                    <div className="fixing">
+                    <img className="img" src={img} alt="img"></img>
 
-                    <h3 className="proName">name</h3>
-                    <div style={{paddingLeft:"65px"}}>
+                    <h4 className="proName">{name}</h4>
+                    <div style={{paddingLeft:"150px"}}>
                     <FaStar style={{color:"yellow"}}/>
-                    {check>=2? (<FaStar style={{color:"yellow"}}/>):( <FaStar />)}
-                    {check>=3? (<FaStar style={{color:"yellow"}}/>):( <FaStar />)}
-                    {check>=4? (<FaStar style={{color:"yellow"}}/>):( <FaStar />)}
-                    {check>=5? (<FaStar style={{color:"yellow"}}/>):( <FaStar />)}
+                    {rate>=2? (<FaStar style={{color:"yellow"}}/>):( <FaStar />)}
+                    {rate>=3? (<FaStar style={{color:"yellow"}}/>):( <FaStar />)}
+                    {rate>=4? (<FaStar style={{color:"yellow"}}/>):( <FaStar />)}
+                    {rate>=5? (<FaStar style={{color:"yellow"}}/>):( <FaStar />)}
                     </div>
-                    <h4 className="proName">$ Price</h4>
+                    <h4 className="proPrice">${price}</h4>
                     
                     </div>
                 </Paper>            

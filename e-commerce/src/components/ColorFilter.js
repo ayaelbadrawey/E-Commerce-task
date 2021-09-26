@@ -1,8 +1,19 @@
 import { Paper } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import './style.css'
 
 function ColorFilter() {
+
+    const [category, setCategory] = useState([]);
+
+    const getCategories=()=>{
+        axios('http://test-api.edfa3ly.io/category').then(response => (setCategory([...response.data])));  
+    }
+  useEffect(() => {
+      getCategories();
+      
+  },)
     return (
         <div>
             <Paper className="colorfilter" variant="outlined">
@@ -10,8 +21,11 @@ function ColorFilter() {
                 <div> 
                 <input className="search" type="text" placeholder="Enter color"></input> 
                 <br></br>
-                <input className="check"type="checkbox"></input>
-                <label>Red</label>
+                {category.map(cat=>(<div key={cat.id}>
+                    <input className="check"type="checkbox"></input>
+                    <label>{cat.color}</label>
+                </div>))}
+                
                 </div>
             </Paper>
         </div>
