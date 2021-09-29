@@ -1,17 +1,16 @@
 import React, { useState , useEffect }from 'react';
 import axios from 'axios'
-import './App.css';
 import Header from'./components/Header';
 import Categroies from './components/Categroies';
 import Products from './components/Products';
-import Filters from './components/Filters';
+import useFilters from './components/Filters';
 
 function App() {
-
+  
+  const {render,min,max,go} = useFilters()
   const [category, setCategory] = useState([]);
   const [categoryID, setCategoryID] = useState(0);
   const [color, setColor] = useState([]);
-
 
   const getCategories=()=>{
       //axios('http://test-api.edfa3ly.io/category').then(response => console.log(response));
@@ -40,10 +39,13 @@ function App() {
       </div>
 
       <div style={{display:"flex"}}>
-        
-      <Filters />
-      <Products id={categoryID} />
+  
+      <useFilters />
+      {render}
+      <Products id={categoryID} min={min} max={max} go={go}/>
+      
       </div>
+
      
     </div>
   );

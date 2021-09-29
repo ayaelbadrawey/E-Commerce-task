@@ -1,3 +1,6 @@
+.bode {
+  overflow-x: hidden;
+}
 .head {
   padding: 5px;
 }
@@ -45,7 +48,7 @@
 }
 
 .bigProd {
-  min-width: 1050px;
+  min-width: 1400px;
   height: 100%;
   padding: 10px;
   margin: 20px;
@@ -56,6 +59,7 @@
   height: 405px;
   padding: 10px;
   margin: 20px;
+  float: left;
   display: inline-flex;
 }
 .filters {

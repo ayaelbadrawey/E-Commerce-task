@@ -5,9 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './style.css'
 import { padding } from '@mui/system';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useLocation } from "react-router";
+
 
 
 function ProductCard({img, name, rate, price}) {
+      
+
     return (
         <div>
             <Paper className="smallProd" elevation={1}>
@@ -23,6 +27,7 @@ function ProductCard({img, name, rate, price}) {
                     {rate>=5? (<FaStar style={{color:"yellow"}}/>):( <FaStar />)}
                     </div>
                     <h4 className="proPrice">${price}</h4>
+                    
                     
                     </div>
                 </Paper>            

@@ -1,29 +1,32 @@
 import { Paper } from '@mui/material'
-import React, { useState }from 'react'
+import React, { useEffect, useState }from 'react'
 import ColorFilter from './ColorFilter'
 import PriceFilter from './PriceFilter'
 import RateFilter from './RateFilter'
 import './style.css'
-import {Link,Router} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import Products from './Products'
 
-function Filters() {
-    const [min, setMin] = useState();
-    const [max, setMax] = useState();
+
+function useFilters() {
+    const [min, setMin] = useState(0);
+    const [max, setMax] = useState(1000000);
     const [go, setGo] = useState(false);
 
     const handleChange1 = (e) =>{
         setMin(e.target.value);
-        console.log(min);
     }
     const handleChange2 = (e) => {
         setMax(e.target.value);
-        console.log(max);
     }
     const goUpdate = () =>{
         setGo(true);
     }
 
-    return (
+    return{ 
+        min, max, go, 
+        render:(
+        
         <div>
             <Paper className="filters" >
             <p className="filter">Filters</p>
@@ -40,7 +43,7 @@ function Filters() {
                 {/* <RateFilter /> */}
             </Paper>
         </div>
-    )
+    )}
 }
 
-export default Filters
+export default useFilters
