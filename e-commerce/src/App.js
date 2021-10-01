@@ -7,13 +7,11 @@ import useFilters from './components/Filters';
 
 function App() {
   
-  const {render,min,max,go} = useFilters()
+  const {render, min, max, go, go2, go3, markedColors, star} = useFilters()
   const [category, setCategory] = useState([]);
   const [categoryID, setCategoryID] = useState(0);
-  const [color, setColor] = useState([]);
 
   const getCategories=()=>{
-      //axios('http://test-api.edfa3ly.io/category').then(response => console.log(response));
       axios('http://test-api.edfa3ly.io/category').then(response => (setCategory([...response.data])));
   }
   const getID =(id,color) =>{
@@ -42,7 +40,7 @@ function App() {
   
       <useFilters />
       {render}
-      <Products id={categoryID} min={min} max={max} go={go}/>
+      <Products id={categoryID} min={min} max={max} go={go} go2={go2} go3={go3} colors={markedColors} star={star}/>
       
       </div>
 

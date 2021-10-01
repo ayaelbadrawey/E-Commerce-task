@@ -58,7 +58,7 @@
   width: 400px;
   height: 405px;
   padding: 10px;
-  margin: 20px;
+  margin: 10px;
   float: left;
   display: inline-flex;
 }
@@ -78,13 +78,14 @@
 }
 .colorfilter {
   min-width: 200px;
-  min-height: 500px;
   margin-left: 30px;
   margin-top: 40px;
-  height: 130px;
   width: 230px;
+  height: 300px;
   border: 6px;
   display: inline-block;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .ratefilter {
   min-width: 200px;
@@ -112,6 +113,7 @@
   height: 30px;
   background-color: white;
 }
+
 .update:hover {
   background-color: lightblue;
 }
@@ -122,8 +124,69 @@
 .search {
   margin-left: 20px;
   padding-top: 0px;
+  width: 150px;
 }
 
 .img {
   max-width: 100%;
+}
+.fav {
+  margin-left: 22px;
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+.star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  /* the hidden clearer */
+}
+.star-cb-group * {
+  font-size: 1.3rem;
+}
+.star-cb-group > input {
+  display: none;
+}
+.star-cb-group > input + label {
+  /* only enough room for the star */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 9999px;
+  width: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.star-cb-group > input + label:before {
+  display: inline-block;
+  text-indent: -9999px;
+  content: "☆";
+  color: #888;
+}
+.star-cb-group > input:checked ~ label:before,
+.star-cb-group > input + label:hover ~ label:before,
+.star-cb-group > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
+}
+.star-cb-group > .star-cb-clear + label {
+  text-indent: -9999px;
+  width: 0.5em;
+  margin-left: -0.5em;
+}
+.star-cb-group > .star-cb-clear + label:before {
+  width: 0.5em;
+}
+.star-cb-group:hover > input + label:before {
+  content: "☆";
+  color: #888;
+  text-shadow: none;
+}
+.star-cb-group:hover > input + label:hover ~ label:before,
+.star-cb-group:hover > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
 }
