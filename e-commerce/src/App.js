@@ -4,6 +4,7 @@ import Header from'./components/Header';
 import Categroies from './components/Categroies';
 import Products from './components/Products';
 import useFilters from './components/Filters';
+import Footer from './components/Footer';
 
 function App() {
   
@@ -41,9 +42,8 @@ function App() {
       <useFilters />
       {render}
       <Products id={categoryID} min={min} max={max} go={go} go2={go2} go3={go3} colors={markedColors} star={star}/>
-      
       </div>
-
+      <Footer />
      
     </div>
   );
